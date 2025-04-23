@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.todo-section{
+   border: 2px solid #fff;
+   height: auto;
+   min-height: 400px;
+   width: 500px;
+   background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 15px;
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        margin-bottom: 15px;
+        color: #002765;
+        img{
+            width: 30px;
+            margin-left: 12px;
+        }
+    }
+    .todo-input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input{
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            padding-left: 10px;
+            font-size: 20px;
+            outline: none;
+            background-color: #ccc;
+        }
+    }
+    #addTaskButton{
+        width: 25%;
+        height: 40px;
+        background-color: #f03737;
+        color: white;
+        border-radius: 30px;
+        border: none;
+        margin-left: -20px;
+        cursor: pointer;
+    }
+}
+ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 0 30px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    color: #002765;
+    position: relative;
+    margin-left: 5px;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-image: url("./iamges/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 11px;
+    cursor: pointer;
+    border: 1px solid #2c2b2b;    
+}
+ul li.checked::before{
+    background-image: url("./iamges/checked.png");
+    background-size: cover;
+    background-position: center;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+ul li span{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 0;
+    top: 5px;
+    font-size: 25px;
+    color: #555;
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: #8b8a8a;
+}
+
